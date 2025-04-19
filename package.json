@@ -8,7 +8,7 @@
     "clean": "rimraf dist"
   },
   "author": "Hoa Do",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
