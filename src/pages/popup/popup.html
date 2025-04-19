@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prompt Picker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <span class="title">Prompt Picker</span>
+        <button id="open-options" title="Manage prompts">⚙️</button>
+      </div>
+    </header>
+
+    <!-- quick-add new prompt directly from popup -->
+    <div class="input-container">
+      <input id="newPrompt" type="text" placeholder="New prompt here…" />
+      <button id="quickAdd" title="Add prompt">➕ Add</button>
+    </div>
+
+    <!-- user enters a keyword or fragment -->
+    <div class="input-container">
+      <input id="query" type="text" placeholder="Search" autocomplete="off" />
+    </div>
+
+    <!-- Toggle switch instead of checkbox -->
+    <div class="toggle-container">
+      <label for="insertDirectly" class="toggle-label-container">
+        <span class="toggle-label">Insert directly into ChatGPT</span>
+        <div class="switch">
+          <input type="checkbox" id="insertDirectly" />
+          <span class="slider"></span>
+        </div>
+      </label>
+    </div>
+
+    <!-- results container with scrolling -->
+    <div id="results-container">
+      <ul id="results"></ul>
+    </div>
+
+    <script src="popup.js" type="module"></script>
+    <!-- 
+    <footer>
+      <div class="footer-container">
+        <p>&copy; Hoa Do</p>
+      </div>
+    </footer> -->
+  </body>
+</html>

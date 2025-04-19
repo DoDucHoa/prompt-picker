@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 14px;
+  width: 300px;
+  color: #333;
+  background-color: #fff;
+  max-height: 500px; /* Maximum height for the popup */
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222;
+}
+
+#open-options {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#open-options:hover {
+  background-color: #f0f0f0;
+}
+
+.input-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+input {
+  flex: 1;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f8bf9;
+  box-shadow: 0 0 0 2px rgba(79, 139, 249, 0.2);
+}
+
+#quickAdd {
+  background-color: #4f8bf9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#quickAdd:hover {
+  background-color: #3d73d4;
+}
+
+/* Toggle Switch styling */
+.toggle-container {
+  margin-bottom: 12px;
+  background-color: #f5f8ff;
+  border: 1px solid #e0e8ff;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+.toggle-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: #4f5975;
+  font-weight: 500;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4f8bf9;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4f8bf9;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Results container with scrolling */
+#results-container {
+  flex: 1;
+  overflow: hidden; /* Hide any overflow */
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 300px; /* Maximum height for the list */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ccc transparent; /* For Firefox */
+}
+
+/* Custom scrollbar for webkit browsers */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.prompt-row {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+  word-break: break-word;
+}
+
+.prompt-row:last-child {
+  border-bottom: none;
+}
+
+.prompt-row:hover {
+  background-color: #f0f7ff;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* Footer Styling */
+/* footer {
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  text-align: center;
+} */

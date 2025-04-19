@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Manage Prompts</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <h1>Prompt Library</h1>
+
+    <!-- add new -->
+    <div id="addBar">
+      <input type="text" id="addInput" placeholder="New prompt…" />
+      <button id="addBtn">Add</button>
+    </div>
+
+    <!-- editable list -->
+    <table id="table">
+      <thead>
+        <tr>
+          <th width="5%"></th>
+          <th>Prompt List</th>
+          <th width="10%"></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- export / import -->
+    <div id="bottomBar">
+      <button id="exportBtn">Export txt</button>
+      <button id="importBtn">Import txt</button>
+      <input id="filePicker" type="file" accept=".txt" hidden />
+    </div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
